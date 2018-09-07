@@ -10,7 +10,6 @@ h1, h2, h3, h4, h5, h6{
 /* 레이아웃 */
 .container{
   background-color: #aaa;
-  height: 100vh;
 }
 .header, .visual, .main, .slogan, .footer{
   width: 940px;
@@ -19,7 +18,13 @@ h1, h2, h3, h4, h5, h6{
 /* 헤더 */
 .header{
   background-color: yellow;
-  height: 10vh;
+  position: relative;
+}
+/* 로고 */
+.logo{
+  position: absolute;
+  top: 50px;
+  left: 65px;
 }
 /* 비주얼 */
 .visual{
