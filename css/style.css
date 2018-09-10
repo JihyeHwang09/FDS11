@@ -39,6 +39,27 @@ table {
   display: block;
   clear: both;
 }
+/* 숨김 콘텐츠 */
+.readable-hidden, .skip-nav{
+  background: red;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  margin: -1px;
+  clip: rect(0,0,0,0);
+}
+.skip-nav:focus{
+  width: 100%;
+  height: auto;
+  padding: 1em;
+  background: #000;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  clip: rect(auto, auto, auto, auto);
+  z-index: 100;
+}
 /* 본문 스타일 */
 html{
   font-size: 10px;
@@ -70,7 +91,7 @@ a{
 .header{
   background-color: #fff;
   position: relative;
-  padding: 0 40px;
+  padding: 0 30px;
 }
 /* 로고 */
 .logo{
@@ -80,14 +101,10 @@ a{
 }
 /* 멤버 링크 */
 .member{
-
   text-align: right;
   font-size: 0;
   padding: 2px 0 2px 0;
-  /* margin-left: 10px;
-  width: 880px; */
-  position: relative;
-  right: -10px;
+  margin-right: -10px;
 }
 .member li, .member a{
   display: inline-block;
@@ -101,9 +118,6 @@ a{
 .member a{
   padding: 8px 10px;
   text-transform: uppercase;
-}
-.readable-hidden{
-  background: pink;
 }
 /* 비주얼 */
 .visual{
