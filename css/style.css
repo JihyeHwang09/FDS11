@@ -130,14 +130,21 @@ a{
   background-color: #F37335;
   background-image: linear-gradient(to bottom, #FDC830 0%, #F37335 30%, #F37335 60%, #FDC830 100%);
   padding-left: 225px;
-  overflow: hidden;
   border-radius: 0 0 5px 5px;
-  position: relative;
+  height: 47px;
 }
 .menu-item{
-  /* height: 45px; */
+  position: relative;
   float: left;
   border-left: 2px solid rgba(255,255,255,0.5);
+}
+.menu-act .menu-item-text{
+  color: #ff0;
+}
+.menu-act .menu-item-text::after{
+  content: "";
+  display: block;
+  border-bottom: 2px solid #000;
 }
 .menu-item-text{
   font-size: 1.6rem;
@@ -154,9 +161,18 @@ a{
 .sub-menu{
   background: skyblue;
   position: absolute;
-  top: 0;
   display: none;
+  top: 47px;
+  left: 0;
+  white-space: nowrap;
 }
+.sub-menu li{
+  display: inline-block;
+}
+.menu-act .sub-menu{
+  display: block
+}
+
 /* 비주얼 */
 .main{
   background-color: blue;
