@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css");
-
+@import url("fonts.css");
 /* 스타일 초기화 */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -123,7 +123,7 @@ a{
 }
 /* 메인 메뉴 */
 .navigation{
-  padding-bottom: 50px;
+  padding-bottom: 40px;
 }
 .menu{
   border-top: 2px solid #000;
@@ -137,6 +137,9 @@ a{
   position: relative;
   float: left;
   border-left: 2px solid rgba(255,255,255,0.5);
+}
+.menu-item:focus, .sub-menu a:focus{
+  outline: 0;
 }
 .menu-act .menu-item-text{
   color: #ff0;
@@ -158,21 +161,38 @@ a{
   display: block;
   line-height: 45px;
 }
-.sub-menu{
-  background: skyblue;
-  position: absolute;
-  display: none;
-  top: 47px;
-  left: 0;
-  white-space: nowrap;
-}
-.sub-menu li{
-  display: inline-block;
-}
 .menu-act .sub-menu{
   display: block
 }
-
+.sub-menu{
+  position: absolute;
+  display: none;
+  top: 47px;
+  white-space: nowrap;
+}
+.menu-item:nth-child(-n+3) .sub-menu{
+  left: 0;
+}
+.menu-item:nth-child(n+4) .sub-menu{
+  right: 0;
+}
+.sub-menu li, .sub-menu a{
+  display: inline-block;
+}
+.sub-menu a{
+  padding: 8px 0;
+  margin-right: 10px;
+}
+.sub-menu a::before{
+  font-family: "webcafeIcon";
+  content: "r";
+  position: relative;
+  top: 2px;
+}
+.sub-menu a:hover::before, 
+.sub-menu a:focus::before{
+  content: "c";
+}
 /* 비주얼 */
 .main{
   background-color: blue;
