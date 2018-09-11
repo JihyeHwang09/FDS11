@@ -183,7 +183,7 @@ a{
   padding: 8px 0;
   margin-right: 10px;
 }
-.sub-menu a::before{
+/* .sub-menu a::before{
   font-family: "webcafeIcon";
   content: "r";
   position: relative;
@@ -192,7 +192,7 @@ a{
 .sub-menu a:hover::before, 
 .sub-menu a:focus::before{
   content: "c";
-}
+} */
 /* 비주얼 */
 .main{
   background-color: blue;
