@@ -1,3 +1,4 @@
+@charset "utf-8";
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css");
 @import url("fonts.css");
@@ -193,9 +194,66 @@ a{
   content: "c";
 } */
 /* 비주얼 */
+@keyframes flowerAni{
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+@keyframes textAni{
+  0%{
+    font-size: 12px;
+    color: rgba(0,0,0,0.2);
+    left: 0;
+    top: 0;
+  }
+  100%{
+    font-size: 24px;
+    color: rgba(0,0,0,1);
+    left: 400px;
+    top: 75px;
+  }
+}
 .visual{
-  background: transparent;
+  position: relative;
   min-height: 120px;
+  background-color: pink;
+}
+.visual::before, .visual::after{
+  animation-name: flowerAni;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+}
+.visual::before{
+  background-image: url("images/ani_flower_01.png"),
+                    url("images/ani_flower_02.png");
+  background-position: 0 -10px, 670px 0;
+}
+.visual::after{
+  animation-delay: 1s;
+  background-image: url("images/ani_flower_03.png"),
+                    url("images/ani_flower_04.png");
+  background-position: 300px 0, 800px 15px;
+  }
+.visual-text{
+  position: absolute;
+  z-index: 100;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background: yellow;
+  animation-name: textAni;
+  animation-duration: 3000ms;
+  animation-fill-mode: forwards;
 }
 /* 메인 */
 .main{
