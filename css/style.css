@@ -343,6 +343,20 @@ a{
   letter-spacing: -1px;
   padding: 8px 0;
 }
+/* 유효성 검사 배너 */
+.validation-list{
+  margin-top: 20px;
+}
+.validation-list a{
+  display: block;
+  border: 1px solid #999;
+  border-radius: 15px;
+  margin-top: 10px;
+  height: 30px;
+  line-height: 30px;
+  text-indent: 45px;
+  background: url("images/validation_icon.png") no-repeat 20px 50%, linear-gradient(to bottom, #aaa, #eee);
+}
 /* 슬로건 */
 .slogan{
   background-color: lime;
