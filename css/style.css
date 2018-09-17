@@ -443,6 +443,79 @@ a{
   background: #333;
   height: 22px;
 }
+/* 공지사항 및 자료실 */
+.board{
+  margin-top: 20px;
+  position: relative;
+}
+.tab{
+  cursor: pointer;
+  background: #aaa;
+  background: linear-gradient(to bottom, #bbb, #eee);
+  color: #333;
+  border: 1px solid #aaa;
+  border-radius: 5px 5px 0 0;
+  padding: 5px 10px;
+  position: absolute;
+  top: 0;
+}
+.tab-act .tab{
+  background: #fff;
+  color: #F37335;
+  border-color: #F37335 #F37335 #fff #F37335;
+}
+.notice-heading{
+  left: 0;
+}
+.pds-heading{
+  left: 73px;
+}
+.notice-list, .pds-list, .notice-more, .pds-more{
+  display: none;
+}
+.tab-act .notice-list, .tab-act .pds-list,
+.tab-act .notice-more, .tab-act .pds-more{
+  display: block;
+}
+.notice-list, .pds-list{
+  padding-top: 45px;
+}
+.notice-list li, .pds-list li{
+  margin-bottom: 10px;
+  position: relative;
+}
+.notice-list a, .pds-list a{
+  display: block;
+  width: calc(100% - 80px);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.notice-list a::before, .pds-list a::before{
+  content: "b";
+  font-family: "WebcafeIcon";
+  position: relative;
+  top: 2px;
+}
+.notice-list time, .pds-list time{
+  position: absolute;
+  top: 0;
+  right: 0;
+  /* float: right; */
+}
+.notice-more, .pds-more{
+  position: absolute;
+  top: 0;
+  right: -8px;
+  padding: 8px;
+}
+.notice-more::before, .pds-more::before{
+  content: "p";
+  font-family: "webcafeIcon";
+  position: relative;
+  top: 2px;
+  color: #0f0;
+}
 /* 슬로건 */
 .slogan{
   background-color: lime;
