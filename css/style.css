@@ -357,6 +357,59 @@ a{
   text-indent: 45px;
   background: url("images/validation_icon.png") no-repeat 20px 50%, linear-gradient(to bottom, #aaa, #eee);
 }
+/* 웹 관련 용어 */
+.term{
+  margin-top: 20px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 10px 15px;
+  background: #aaa;
+  background: linear-gradient(to bottom, #bbb, #eee);
+}
+.term-heading{
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.term-list{
+  background: yellow;
+  margin-top: 10px;
+}
+.term-list-subject, .term-list-brief{
+  width: 145px;
+}
+.term-list-subject{
+  background: lime;
+  color: #296897;
+}
+.term-list-thumbnail{
+  background: orange;
+}
+.term-list-thumbnail img{
+  display: block;
+}
+.term-list-brief{
+  background: pink;
+  margin-top: 10px;
+}
+.term-list div{
+  margin-top: 10px;
+}
+/* 홀수 */
+.term-list div:nth-child(odd) .term-list-subject,
+.term-list div:nth-child(odd) .term-list-brief{
+  float: right;
+}
+.term-list div:nth-child(odd) .term-list-thumbnail{
+  float: left;
+}
+/* 짝수 */
+.term-list div:not(:nth-child(odd)) .term-list-subject,
+.term-list div:not(:nth-child(odd)) .term-list-brief{
+  float: left;
+}
+.term-list div:not(:nth-child(odd)) .term-list-thumbnail{
+  float: right;
+}
 /* 슬로건 */
 .slogan{
   background-color: lime;
